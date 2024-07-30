@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete an Article</title>
+</head>
+<body>
+    <h2>Are you sure you want to delete "{{ article.headline }}"?</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+
+    <a href="{% url 'home' %}">No, take me home</a>
+
+</body>
+</html>
